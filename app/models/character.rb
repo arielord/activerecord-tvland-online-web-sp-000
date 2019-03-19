@@ -8,6 +8,6 @@ class Character < ActiveRecord::Base
   
   def build_show(show_name)
     show = Show.new(name: show_name)
-    self.show = show.name
+    self.show = show
   end
 end
