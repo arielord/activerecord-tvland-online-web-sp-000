@@ -5,4 +5,9 @@ class Character < ActiveRecord::Base
   def say_that_thing_you_say
     "#{self.name} always says: #{self.catchphrase}"
   end
+  
+  def build_show(show_name)
+    show = Show.new(name: show_name)
+    self.show = show
+  end
 end
